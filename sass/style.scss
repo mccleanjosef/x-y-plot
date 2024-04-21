@@ -1,0 +1,34 @@
+@import "var";
+@import "resets";
+@import "header";
+@import "chart";
+@import "data-section";
+
+
+body{
+    width: 100vw;
+    background: $cream;
+    color: $med-blue;
+    font-family: $font;
+    font-weight: $regular;
+    letter-spacing: 0.05rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+}
+
+h5{
+    text-transform: uppercase;
+}
+
+
+main{
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: yellow;
+    padding: 0 5vw 50px 10vw;
+}

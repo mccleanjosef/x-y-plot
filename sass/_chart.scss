@@ -1,0 +1,72 @@
+// .graph-ctn{
+//     width: 100%;
+//     // height: 100%;
+//     // background: coral;
+//     // padding: 0 5vw 0 10vw;
+//     background: red;
+// }
+
+.chart{
+    // background: blue;
+    width: 100%;
+    height: 100%;
+    &__title{
+        color: $dark-blue;
+        font-size: 3.6rem;
+        font-weight: $medium;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    &__label{
+        font-size: 2.4rem;
+        color: $dark-blue;
+        font-weight: $medium;
+        text-transform: uppercase;
+        position: absolute;
+    }
+    &__y-axis-label{
+        // background: red;
+        transform-origin: top left;
+        left:-2.2rem;
+        top:50%;
+        transform: rotate(-90deg) translateX(-50%);
+    }
+    &__x-axis-label{
+        width: 100%;
+        text-align: center;
+        left: 0%;
+        bottom: -3rem;
+    }
+}
+
+.ct-chart{
+    // background: green;
+    position: relative;
+    max-height: 65vh;
+    // max-width: 80vw;
+}
+
+.ct-label{
+    font-family: $font;
+    font-weight: $regular;
+    font-size: 2rem;
+    color: $dark-blue;
+    justify-content: flex-end;
+}
+
+.ct-grid{
+    // stroke: $dark-blue;
+    opacity: 0.36;
+}
+
+.ct-point{
+    stroke: $magenta !important;
+}
+
+.ct-line{
+    stroke: $pink !important;
+}
+
+svg:not(:root){
+    overflow: visible;
+}

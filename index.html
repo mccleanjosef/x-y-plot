@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>X-Y Plot</title>
+</head>
+<body id ="myContainer">
+    <header>
+        <h1 class="title">X-Y PLOT</h1>
+        <!-- <button class="colour-modes-button">
+            <img class="colours-icon" src="./img/noun-colour-3005760.svg" alt="Colour Modes Icon">
+            <h5 class="colour-icon-text">preferences</h5>
+        </button> -->
+    </header>
+    <section id ="dataSection" class="data data--reverse">
+        <div class="data__content">
+            <div id="dataBtn" class="data__icon-ctn">
+                <img class="data__icon" src="./img/noun-excel-3747621.svg" alt="Data Icon">
+                <h5 class="data__icon-label">Data</h5>
+            </div>
+            <div class="table__wrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"><input class="table__title" id="yAxisTitle" type="text" value="Apples"/></th>
+                            <th scope="col"><input class="table__title" id="xAxisTitle" type="text" value="Bananas"/></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="table__data y-data" type="number" value="100"/></td>
+                            <td><input class="table__data x-data" type="number" value="-10"/></td>
+                        </tr>
+                        <tr>
+                            <td><input class="table__data y-data" type="number" value="0"/></td>
+                            <td><input class="table__data x-data" type="number" value="-5"/></td>
+                        </tr>
+                        <tr>
+                            <td><input class="table__data y-data" type="number" value="-25"/></td>
+                            <td><input class="table__data x-data" type="number" value="0"/></td>
+                        </tr>
+                        <tr>
+                            <td><input class="table__data y-data" type="number" value="-75"/></td>
+                            <td><input class="table__data x-data" type="number" value="5"/></td>
+                        </tr>
+                        <tr>
+                            <td><input class="table__data y-data" type="number" value="-100"/></td>
+                            <td><input class="table__data x-data" type="number" value="10"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="data__plus-minus-ctn">
+                    <div class="data__button-circle data__button-circle--plus">
+                        <img class="data__plus-btn" src="./img/noun-plus-2048205.svg" alt="plus row icon">
+                    </div>
+                    <div class="data__button-circle data__button-circle--minus">
+                        <img class="data__minus-btn" src="./img/noun-minus-2573487.svg" alt="minus row icon">
+                    </div>
+                </div>
+            </div>
+            <button class="data__submit-btn" id="dataSubmitBtn" type="submit">Submit</button>
+        </div>
+    </section>
+    <main id="main" class="chart--reverse">
+        <div class="chart">
+            <h2 class="chart__title"><span id="titleY">Apples</span> vs <span id="titleX">Bananas</span></h2>
+            <div class="ct-chart ct-golden-section" id="chart1">
+            <!-- <div class="ct-chart" id="chart1"> -->
+                <div class="chart__label chart__y-axis-label">
+                    <span id="yAxisLabel">Apples</span>
+                </div>
+                <div class="chart__label chart__x-axis-label">
+                    <span id="xAxisLabel">Bananas</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./node_modules/chartist/dist/chartist.min.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>

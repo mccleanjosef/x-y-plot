@@ -1,0 +1,33 @@
+header{
+    height: 20vh;
+    // background: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+
+    width: 100vw;
+}
+
+.title{
+    font-weight: $bold;
+    font-size: 4rem;
+}
+
+.colour-modes-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.colours-icon{
+    height: 5rem;
+    filter: invert(85%) sepia(19%) saturate(7161%) hue-rotate(183deg) brightness(80%) contrast(87%);
+}
+
+.colour-icon-text{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: $medium;
+}

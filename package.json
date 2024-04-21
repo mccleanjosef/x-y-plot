@@ -1,0 +1,18 @@
+{
+  "name": "x-y-plot",
+  "version": "1.0.0",
+  "description": "X-Y Plot Graph",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josef McClean",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "chartist": "^0.11.4",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.51.0"
+  }
+}
