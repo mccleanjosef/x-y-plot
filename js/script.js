@@ -2,6 +2,10 @@ import anime from '../node_modules/animejs/lib/anime.es.js';
 
 console.log('script is linked');
 
+const addRowBtn = document.getElementById("btnAddRow");
+const deleteRowBtn = document.getElementById("btnDeleteRow");
+
+
 // Data Section Animation STARTS
 const dataBtn = document.getElementById("dataBtn");
 const dataDiv = document.getElementById("dataSection");
@@ -48,7 +52,7 @@ function toggleDataSection() {
     // console.log('play');
     anime({
       targets: ".chart--play",
-      width: 70 + 'vw',
+      width: 80 + 'vw',
       duration: 500,
       easing: 'easeInOutSine',
     })
@@ -58,7 +62,7 @@ function toggleDataSection() {
     // console.log('reverse');
     anime({
       targets: ".chart--reverse",
-      width: 90 + 'vw',
+      width: 100 + 'vw',
       duration: 500,
       easing: 'easeInOutSine'
     })
@@ -116,6 +120,28 @@ function tableData() {
 }
 tableData();
 // Table data ENDS
+
+// Table add and delete row STARTS
+function createRow() {
+  const table = document.getElementById("table");
+  const row = table.insertRow();
+  const cellY = row.insertCell(0);
+  const cellX = row.insertCell(1);
+  cellY.innerHTML = '<input class="table__data y-data" type="number" value="0"/>';
+  cellX.innerHTML = '<input class="table__data x-data" type="number" value="0"/>';
+}
+
+function deleteRow() {
+  const table = document.getElementById("table");
+  const tableRowLength = table.rows.length;
+
+  // Leaves at least 2 rows when deleting
+  if (tableRowLength > 2){
+    // console.log(tableRows);
+    table.deleteRow(-1);
+  }
+}
+// Table add and delete row ENDS
 
 // Chart ticks STARTS
 const ticksAxisX = [];
@@ -189,7 +215,7 @@ function submitData() {
   yAxisTicks();
   createChart();
 
-  console.log("worked");
+  // console.log("worked");
 }
 // Submit ENDS
 
@@ -198,3 +224,5 @@ function submitData() {
 
 dataBtn.addEventListener("click", toggleDataSection);
 submitBtn.addEventListener("click", submitData);
+addRowBtn.addEventListener("click", createRow);
+deleteRowBtn.addEventListener("click", deleteRow);
